@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio - [Your Name]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .modal-open {
+            overflow: hidden;
+        }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        /* Simple border focus for accessibility and minimalist style */
+        :focus-visible {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-900">[Your Name]</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition duration-300">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-gray-900 transition duration-300">Projects</a>
+                <a href="#contact" class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-black transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-gray-900">About</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-gray-900">Projects</a>
+            <a href="#contact" class="block mt-2 bg-gray-800 text-white px-4 py-2 rounded-md text-center hover:bg-black">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Hero Section -->
+        <section id="home" class="text-center py-20 md:py-32">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Hi, I'm [Your Name]</h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 font-medium">[Your Engineering Specialty]</p>
+                <p class="mt-6 max-w-2xl mx-auto text-gray-700">
+                    Passionate about solving complex problems through technology and design. With experience in [Area 1], [Area 2], and [Area 3], I aim to create efficient and sustainable solutions.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#projects" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-black transition duration-300">View My Projects</a>
+                    <a href="/path/to/your/cv.pdf" download class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 border border-gray-300">Download CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 border-t border-gray-200">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
+                <div class="grid md:grid-cols-5 gap-12">
+                    <div class="md:col-span-3 text-gray-700 space-y-4">
+                        <p>I am a [Your Specialty] engineer with a strong background in [Mention your education/field]. My career has centered on [Describe your main focus], where I've had the opportunity to work on challenging projects ranging from [Example Project 1] to [Example Project 2].</p>
+                        <p>I am driven by the intersection of theory and practical application, and I enjoy learning and applying new technologies to optimize my designs. I firmly believe in teamwork and clear communication as pillars for any successful project.</p>
+                    </div>
+                    <div class="md:col-span-2 space-y-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Key Skills</h3>
+                        <div>
+                            <h4 class="font-bold mb-3 text-gray-700">Software & Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">AutoCAD</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">SolidWorks</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">MATLAB</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">ANSYS</span>
+                            </div>
+                        </div>
+                         <div>
+                            <h4 class="font-bold mb-3 text-gray-700">Technical Competencies</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">FEA Analysis</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Product Design</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Project Management</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">CFD Simulation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 border-t border-gray-200">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg border border-gray-200 overflow-hidden cursor-pointer hover:border-gray-400 transition-colors duration-300" data-project="1">
+                    <img src="https://placehold.co/600x400/111827/FFFFFF?text=Project+1" alt="Project 1 Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Robotic Arm Design</h3>
+                        <p class="text-gray-600 text-sm">Development of a 5-axis robotic arm for automating assembly tasks.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg border border-gray-200 overflow-hidden cursor-pointer hover:border-gray-400 transition-colors duration-300" data-project="2">
+                    <img src="https://placehold.co/600x400/111827/FFFFFF?text=Project+2" alt="Project 2 Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Aerodynamic Simulation</h3>
+                        <p class="text-gray-600 text-sm">CFD analysis to optimize the aerodynamic profile of an automotive component.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg border border-gray-200 overflow-hidden cursor-pointer hover:border-gray-400 transition-colors duration-300" data-project="3">
+                    <img src="https://placehold.co/600x400/111827/FFFFFF?text=Project+3" alt="Project 3 Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">IoT Monitoring System</h3>
+                        <p class="text-gray-600 text-sm">Creation of a sensor-based system to monitor the structural integrity of a bridge.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50 -mx-6 px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900">Let's Talk</h2>
+                <p class="mt-4 text-gray-700">I'm available for new opportunities and collaborations. If you have a project in mind or just want to say hello, feel free to reach out.</p>
+                <a href="mailto:your.email@example.com" class="mt-8 inline-block bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-black transition duration-300">
+                    Send a Message
+                </a>
+                <div class="mt-12 flex justify-center gap-6">
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" class="text-gray-500 hover:text-gray-800">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://github.com/your-username" target="_blank" class="text-gray-500 hover:text-gray-800">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-4 text-center text-sm text-gray-400">
+            &copy; <span id="year"></span> [Your Name]. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal fixed inset-0 bg-black bg-opacity-70 z-50 hidden items-center justify-center p-4">
+        <div id="modal-content" class="bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative">
+            <!-- Content is injected here by JS -->
+        </div>
+    </div>
+
+    <script>
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Footer Year Logic ---
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- Project Data ---
+        const projectsData = {
+            '1': {
+                title: '5-Axis Robotic Arm Design & Build',
+                image: 'https://placehold.co/800x500/111827/FFFFFF?text=Robotic+Arm',
+                tags: ['Mechanical Design', 'Automation', 'SolidWorks', '3D Printing'],
+                sections: [
+                    { title: 'The Problem', content: 'A manufacturing company needed to automate a repetitive assembly task for small components to reduce human error and increase production speed.' },
+                    { title: 'My Role & Responsibilities', content: 'I led the mechanical design of the robotic arm. My responsibilities included 3D modeling all parts in SolidWorks, selecting motors and actuators, and performing stress analysis on critical components to ensure durability.' },
+                    { title: 'Process & Tools', content: 'I used SolidWorks for CAD design and its simulation module for finite element analysis (FEA). Part prototypes were fabricated using an FDM 3D printer to verify assemblies and kinematics. The controller was programmed in Python.' },
+                    { title: 'The Outcome', content: 'The project resulted in a functional prototype that successfully reduced assembly time per unit by 40% and decreased the error rate to near zero. The design was extensively documented for future mass production.' }
+                ]
+            },
+            '2': {
+                title: 'Aerodynamic Optimization with CFD Simulation',
+                image: 'https://placehold.co/800x500/111827/FFFFFF?text=CFD+Simulation',
+                tags: ['CFD', 'Aerodynamics', 'ANSYS Fluent', 'Automotive'],
+                sections: [
+                    { title: 'The Problem', content: 'A racing team sought to reduce the aerodynamic drag of their competition vehicle without compromising the downforce required for stability in corners.' },
+                    { title: 'My Role & Responsibilities', content: 'I was responsible for conducting all Computational Fluid Dynamics (CFD) simulations. This involved preparing the vehicle geometry for simulation, defining the computational mesh, setting up boundary conditions, and analyzing the results.' },
+                    { title: 'Process & Tools', content: 'The primary software was ANSYS Fluent. Multiple iterations were performed, testing different modifications to the rear wing and diffuser. Streamlines and pressure maps were visualized to identify areas of high drag and turbulent flow.' },
+                    { title: 'The Outcome', content: 'The proposed modifications based on simulation results achieved an 8% reduction in the total drag coefficient while maintaining optimal downforce levels. This translated into a measurable improvement in lap times.' }
+                ]
+            },
+            '3': {
+                title: 'Structural Health Monitoring System with IoT',
+                image: 'https://placehold.co/800x500/111827/FFFFFF?text=IoT+Monitoring',
+                tags: ['IoT', 'Structural Engineering', 'Sensors', 'Python'],
+                sections: [
+                    { title: 'The Problem', content: 'Transportation authorities needed a low-cost, real-time method to monitor vibrations and strain on an aging bridge to predict failures and plan maintenance proactively.' },
+                    { title: 'My Role & Responsibilities', content: 'I designed the sensor system architecture and developed the software for data collection and visualization. My work included selecting accelerometers and strain gauges, programming the microcontrollers (ESP32), and creating a web-based dashboard.' },
+                    { title: 'Process & Tools', content: 'Sensor data was sent via Wi-Fi to a cloud database. I used Python with the Flask library to create an API and a simple dashboard with Plotly to visualize the data in real-time. The microcontroller code was written in C++ (Arduino).' },
+                    { title: 'The Outcome', content: 'A functional monitoring system was deployed, allowing engineers to view the bridge\'s status from anywhere. The system has successfully detected anomalies correlated with heavy traffic, providing valuable data for predictive maintenance models.' }
+                ]
+            }
+        };
+
+        // --- Project Modal Logic ---
+        const projectCards = document.querySelectorAll('.project-card');
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+        const body = document.body;
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const projectId = card.dataset.project;
+                const data = projectsData[projectId];
+                if (!data) return;
+
+                let tagsHtml = data.tags.map(tag => `<span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">${tag}</span>`).join('');
+                
+                let sectionsHtml = data.sections.map(section => `
+                    <div class="mb-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">${section.title}</h4>
+                        <p class="text-gray-700 leading-relaxed">${section.content}</p>
+                    </div>
+                `).join('');
+
+                modalContent.innerHTML = `
+                    <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 z-10 rounded-full p-1 focus-visible:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <img src="${data.image}" alt="${data.title} image" class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-3">${data.title}</h3>
+                        <div class="flex flex-wrap gap-2 mb-6">${tagsHtml}</div>
+                        ${sectionsHtml}
+                    </div>
+                `;
+                
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                body.classList.add('modal-open');
+
+                document.getElementById('close-modal').addEventListener('click', closeModal);
+            });
+        });
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            body.classList.remove('modal-open');
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape" && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
