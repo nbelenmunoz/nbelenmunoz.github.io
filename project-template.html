@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CHANGE THIS TITLE FOR EACH PROJECT -->
+    <title>Project: Decentralized UAV Swarm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+        .navbar {
+            padding: 1.5rem 2rem;
+        }
+        .navbar a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-right: 20px;
+        }
+        .project-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 2rem;
+        }
+        .project-header h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #555;
+            padding-bottom: 1rem;
+        }
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        @media (min-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .project-description p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ccc;
+        }
+        .project-skills h3, .project-media h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skills-list li {
+            background-color: #333;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+        }
+        .project-media img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="projects.html">Projects</a>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="project-container">
+        <header class="project-header">
+            <!-- PROJECT TITLE -->
+            <h1>Decentralized UAV Swarm Chain Formation</h1>
+        </header>
+
+        <div class="project-content">
+            <div class="project-details">
+                <div class="project-description">
+                    <!-- PROJECT DESCRIPTION -->
+                    <p>
+                        This project focused on developing a decentralized control algorithm for a swarm of Unmanned Aerial Vehicles (UAVs). The goal was to enable the swarm to form and maintain a chain formation without a central command unit, relying only on local communication between neighboring drones. This enhances robustness and scalability for tasks like surveillance and environmental monitoring.
+                    </p>
+                </div>
+                <div class="project-skills">
+                    <h3>Skills & Technologies</h3>
+                    <ul class="skills-list">
+                        <!-- LIST OF SKILLS -->
+                        <li>ROS (Robot Operating System)</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>Gazebo Simulation</li>
+                        <li>Control Theory</li>
+                        <li>Decentralized Systems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-media">
+                <h3>Media</h3>
+                <!-- PROJECT IMAGES -->
+                <img src="https://placehold.co/600x400/555/fff?text=Project+Image+1" alt="Detailed project image 1">
+                <img src="https://placehold.co/600x400/555/fff?text=Project+Image+2" alt="Detailed project image 2">
+                
+                <!-- PROJECT VIDEO (e.g., from YouTube) -->
+                <!-- Go to your YouTube video, click Share -> Embed, and copy the `src` URL here -->
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
