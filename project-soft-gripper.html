@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Soft Robotic Gripper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS styles are the same, no changes needed here */
+        body { background-color: #1a1a1a; color: #f0f0f0; font-family: 'Roboto', sans-serif; margin: 0; }
+        .navbar { padding: 1.5rem 2rem; }
+        .navbar a { color: #f0f0f0; text-decoration: none; font-size: 1.1rem; margin-right: 20px; }
+        .project-container { max-width: 1000px; margin: 40px auto; padding: 2rem; }
+        .project-header h1 { font-size: 3rem; margin-bottom: 2rem; border-bottom: 2px solid #555; padding-bottom: 1rem; }
+        .project-content { display: grid; grid-template-columns: 1fr; gap: 40px; }
+        @media (min-width: 768px) { .project-content { grid-template-columns: 1fr 1fr; } }
+        .project-description p { font-size: 1.1rem; line-height: 1.7; color: #ccc; }
+        .project-skills h3, .project-media h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
+        .skills-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; }
+        .skills-list li { background-color: #333; color: #fff; padding: 8px 15px; border-radius: 20px; margin: 5px; font-size: 0.9rem; }
+        .project-media img { width: 100%; height: auto; margin-bottom: 1rem; border-radius: 5px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="projects.html">Projects</a>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="project-container">
+        <header class="project-header">
+            <h1>Design of a Soft Robotic Gripper</h1>
+        </header>
+
+        <div class="project-content">
+            <div class="project-details">
+                <div class="project-description">
+                    <p>
+                        This project involved the complete design, simulation, and fabrication of a pneumatically actuated soft robotic gripper. The primary goal was to create a gripper capable of handling delicate and irregularly shaped objects without causing damage. The design was inspired by biological structures, utilizing silicone casting and 3D-printed molds to achieve complex internal air channels.
+                    </p>
+                </div>
+                <div class="project-skills">
+                    <h3>Skills & Technologies</h3>
+                    <ul class="skills-list">
+                        <li>SolidWorks CAD</li>
+                        <li>Finite Element Analysis (FEA)</li>
+                        <li>3D Printing (FDM)</li>
+                        <li>Silicone Casting</li>
+                        <li>Pneumatic Control</li>
+                        <li>Arduino</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-media">
+                <h3>Media</h3>
+                <img src="images/gripper-cad-model.jpg" alt="CAD model of the soft robotic gripper">
+                <img src="images/gripper-in-action.jpg" alt="The gripper holding a delicate object">
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
