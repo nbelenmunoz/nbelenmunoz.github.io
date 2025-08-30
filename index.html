@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Belen Munoz</title>
+    <title>Belen Munoz - Portfolio</title>
+    <!-- Importing a nice font and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -11,171 +13,80 @@
             color: #f0f0f0;
             font-family: 'Roboto', sans-serif;
             margin: 0;
-        }
-        .navbar {
-            padding: 1.5rem 2rem;
-        }
-        .navbar a {
-            color: #f0f0f0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            margin-right: 20px;
-        }
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #a0a0a0;
-        }
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-            max-width: 1400px;
-            margin: auto;
-        }
-        .project-item {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            aspect-ratio: 4 / 3; /* Ensures all grid items have the same shape */
-        }
-        .project-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-        .project-item:hover img {
-            transform: scale(1.05);
-        }
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             text-align: center;
-            padding: 1rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
-        .project-item:hover .project-overlay {
-            opacity: 1;
+        .container {
+            max-width: 800px;
+            padding: 2rem;
         }
-        .project-overlay h3 {
-            margin: 0;
-            font-size: 1.5rem;
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
-        .project-overlay span {
-            margin-top: 0.5rem;
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .projects-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
             font-size: 1rem;
-            color: #ccc;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .projects-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+        .social-links {
+            margin-top: 2.5rem;
+        }
+        .social-links a {
+            color: #a0a0a0;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .social-links a:hover {
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="projects.html">Projects</a>
-        <a href="index.html">Home</a>
-    </nav>
+    <div class="container">
+        <!-- YOUR NAME HERE -->
+        <h1>Belen Munoz</h1>
 
-    <div class="hero">
-        <h1>Hi, I'm Belen Munoz!</h1>
-        <p>Scroll down to see some of my work</p>
-    </div>
+        <!-- YOUR "ABOUT ME" BIO HERE -->
+        <p>
+            Hi! I'm Belen Muñoz, a Salvadoran mechatronics engineer with a minor in cyber-physical systems, currently pursuing a master's degree in mechanical engineering focus on robotics. From tinkering with mechanical systems to automating advanced robotics, I've always been fascinated by how technology shapes our future.
+        </p>
 
-    <div class="project-grid">
+        <!-- BUTTON TO LINK TO YOUR PROJECTS PAGE -->
+        <a href="projects.html" class="projects-button">See my projects</a>
 
-        <!-- ===== YOUR NEW PROJECTS ARE HERE ===== -->
-
-        <a href="project-soft-gripper.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=Soft+Robotic+Gripper" alt="Design Soft Robotic Gripper">
-            <div class="project-overlay">
-                <h3>Design Soft Robotic Gripper</h3>
-                <span>2024</span>
-            </div>
-        </a>
-
-        <a href="project-scara-robot.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=SCARA+Robot" alt="4-DOF SCARA Robot Kinematics & Dynamics Modeling">
-            <div class="project-overlay">
-                <h3>4-DOF SCARA Robot Kinematics & Dynamics Modeling</h3>
-                <span>2024</span>
-            </div>
-        </a>
-
-        <a href="project-llm-planner.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=LLM+CNC+Planner" alt="LLM-Assited CNC Process Planner">
-            <div class="project-overlay">
-                <h3>LLM-Assited CNC Process Planner</h3>
-                <span>2023</span>
-            </div>
-        </a>
-
-        <a href="project-uav-swarm.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=UAV+Swarm" alt="Decentralized UAV Swarm Chain Formation">
-            <div class="project-overlay">
-                <h3>Decentralized UAV Swarm Chain Formation</h3>
-                <span>2023</span>
-            </div>
-        </a>
-        
-        <a href="project-robot-slam.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=Robot+Navigation" alt="Diferential Robot Navigation & SLAM">
-            <div class="project-overlay">
-                <h3>Diferential Robot Navigation & SLAM</h3>
-                <span>2022</span>
-            </div>
-        </a>
-
-        <a href="project-hoverboard.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=Hoverboard" alt="Self Balance Hoverboard">
-            <div class="project-overlay">
-                <h3>Self Balance Hoverboard</h3>
-                <span>2022</span>
-            </div>
-        </a>
-
-        <a href="project-wheelchair-assist.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=Wheelchair+Assist" alt="Assistence wheel for wheelchair">
-            <div class="project-overlay">
-                <h3>Assistence wheel for wheelchair</h3>
-                <span>2021</span>
-            </div>
-        </a>
-
-        <a href="project-delta-robot.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=Delta+Robot" alt="Desing of 2 DOF Delta Robot">
-            <div class="project-overlay">
-                <h3>Desing of 2 DOF Delta Robot</h3>
-                <span>2021</span>
-            </div>
-        </a>
-
-        <a href="project-rower-design.html" class="project-item">
-            <img src="https://placehold.co/600x400/555/fff?text=Indoor+Rower" alt="Indoor rower design">
-            <div class="project-overlay">
-                <h3>Indoor rower design</h3>
-                <span>2020</span>
-            </div>
-        </a>
-        
+        <!-- YOUR SOCIAL MEDIA LINKS HERE -->
+        <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:youremail@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
     </div>
 
 </body>
